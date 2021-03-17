@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="37b54c02-3119-4b9d-b0da-ad9d14d72155" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/笔记" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/qiu/pojo/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qiu/pojo/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yaml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -34,6 +37,10 @@
   </component>
   <component name="ProjectId" id="1pn98tVUaH3RAIWC4WdrwKDKkjc" />
   <component name="PropertiesComponent">
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="SONARLINT_PRECOMMIT_ANALYSIS" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -109,6 +116,8 @@
       <updated>1615807830112</updated>
       <workItem from="1615807833024" duration="2447000" />
       <workItem from="1615861524562" duration="277000" />
+      <workItem from="1615964733780" duration="644000" />
+      <workItem from="1615968683606" duration="1697000" />
     </task>
     <task id="LOCAL-00001" summary="start">
       <created>1615809369522</created>
@@ -117,7 +126,14 @@
       <option name="project" value="LOCAL" />
       <updated>1615809369522</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="笔记">
+      <created>1615964749042</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1615964749042</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -138,6 +154,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="start" />
-    <option name="LAST_COMMIT_MESSAGE" value="start" />
+    <MESSAGE value="笔记" />
+    <option name="LAST_COMMIT_MESSAGE" value="笔记" />
   </component>
 </project>

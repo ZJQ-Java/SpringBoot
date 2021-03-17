@@ -1,14 +1,19 @@
-person:
-  name: zjq
-  age: 25
-  lists:
-    - 1
-    - 3
-    - aa
-  maps: {k1: k1, k2: k2}
-  email: zjq516902@163.com
-  dog:
-    age: 1
-    name: ${person.age:20}_土豆
+server:
+  port: 8080
+spring:
+  profiles:
+    active: product
+---
+server:
+  port: 8081
 
+spring:
+  profiles: dev
+
+---
+server:
+  port: 8082
+
+spring:
+  profiles: product
 

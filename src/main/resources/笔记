@@ -1,0 +1,25 @@
+YAML:
+1.当绑定到 Map 属性时，如果 key 包含除小写字母数字字符或 - 以外的任何内容，则需要使用括号表示法来保留原始值。如果 key 没有使用 [] 包裹，
+则里面的任何非字母数字字符或 - 的字符都将被删除。例如，将以下属性绑定到一个 Map：
+acme:
+  map:
+    "[/key1]": value1
+    "[/key2]": value2
+    /key3: value3
+上面的属性将绑定到一个 Map 上，其中 /key1，/key2 和 key3 作为 map 的 key。
+
+2.yaml文件加载顺序
+ 1）./config
+ 2)./
+ 3)classpath:config/
+ 4)classpath:/
+3.使用spring-profile指定多个环境
+
+自动装配：  spring-factory 与yaml文件关联
+ 这就是自动装配的原理!
+精髓:
+1)、SpringBoot启动会加载大量的自动配置类
+2)我们看我们需要的功能有没有在SpringBoot默认写好的自动配置类当中;
+3)、我们再来看这个自动配置类中到底配置了哪些组件;(只要我们要用的组件存在在其中，我们就不需要再手动配置了)
+4)、给容器中自动配置类添加组件的时候，会从properties类中获取某些属性。我们只需要在配置文件中指定这些属性的值即可;
+ xxxxAutoConfigurartion:自动配置类;给容器中添加组件 xxxxProperties:封装配置文件中相关属性;

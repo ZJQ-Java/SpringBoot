@@ -9,12 +9,12 @@ import java.util.List;
 import java.util.Map;
 
 @Component
-@ConfigurationProperties(prefix = "person")
+@ConfigurationProperties(prefix = "qiu")  //通过设置前缀，然后再yml文件中设置属性
 //@PropertySource(value = "classpath:user.properties")
 @Validated
 public class Person {
 
-    private String              name;
+    private String              personName;
     private Integer             age;
     @Email
     private String              email;
@@ -25,7 +25,7 @@ public class Person {
     @Override
     public String toString() {
         return "Person{" +
-                "name='" + name + '\'' +
+                "personName='" + personName + '\'' +
                 ", age=" + age +
                 ", email='" + email + '\'' +
                 ", lists=" + lists +
@@ -42,12 +42,12 @@ public class Person {
         this.email = email;
     }
 
-    public String getName() {
-        return name;
+    public String getPersonName() {
+        return personName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setPersonName(String personName) {
+        this.personName = personName;
     }
 
     public Integer getAge() {
