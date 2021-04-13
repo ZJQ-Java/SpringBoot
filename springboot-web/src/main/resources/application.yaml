@@ -1,13 +1,17 @@
+#spring:
+#  如果在controller中找不到路由
+#  就会再静态资源所在目录寻找："classpath:/haha/"
+#  配置后会使用haha/index.html
+#  web:
+#    resources:
+#      static-locations: [classpath:/haha/]
+#  所有静态资源访问路由都需要家/res/，会导致静态index.html失效
+#  mvc:
+#    static-path-pattern: /res/**
+
+#rest post请求转put,delete
 spring:
-  #如果在controller中找不到路由
-  #就会再静态资源所在目录寻找："classpath:/META-INF/resources/",
-  #				"classpath:/resources/",
-  #  "classpath:/static/",
-  #  "classpath:/public/"，
-  #  "classpath:/haha/"
-  web:
-    resources:
-      static-locations: [classpath:/haha/]
-  #所有静态资源访问路由都需要家/res/
   mvc:
-    static-path-pattern: /res/**
+    hiddenmethod:
+      filter:
+        enabled: true
