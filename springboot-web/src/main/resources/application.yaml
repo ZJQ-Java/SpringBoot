@@ -9,7 +9,7 @@
 #  mvc:
 #    static-path-pattern: /res/**
 
-#rest post请求转put,delete
+#rest post请求转put,delete   修改_method HiddenHttpMethodFilter
 spring:
   mvc:
     hiddenmethod:
