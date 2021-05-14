@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+
+    <!-- <classPathEntry location="C:\Users\58\.m2\repository\mysql\mysql-connector-java\5.1.34\mysql-connector-java-5.1.34.jar"
+        /> -->
+    <context id="context1" targetRuntime="MyBatis3">
+        <plugin type="builder.PaginationPlugin"/>
+        <plugin type="builder.OverwriteXmlPlugin"/>
+        <!-- <plugin type="org.mybatis.generator.plugins.UnmergeableXmlMappersPlugin"
+            /> -->
+        <plugin type="org.mybatis.generator.plugins.FluentBuilderMethodsPlugin"/>
+        <plugin type="org.mybatis.generator.plugins.SerializablePlugin"/>
+        <!-- <plugin type="org.mybatis.generator.plugins.MapperAnnotationPlugin" />
+        <plugin type="org.mybatis.generator.plugins.CachePlugin" /> -->
+        <plugin type="org.mybatis.generator.plugins.ToStringPlugin"/>
+        <commentGenerator>
+            <!-- 是否去除自动生成的注释 -->
+            <property name="suppressAllComments" value="true"/>
+            <property name="suppressDate" value="true"/>
+        </commentGenerator>
+        <!--数据库链接URL，用户名、密码 -->
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+                        connectionURL="jdbc:mysql://localhost:3306/ssmbuild?useUnicode=true&amp;characterEncoding=utf-8&amp;useSSL=false&amp;serverTimezone=GMT"
+                        userId="root"
+                        password="zjq123">
+            <property name="nullCatalogMeansCurrent" value="true"/>
+        </jdbcConnection>
+        <javaModelGenerator targetPackage="com.qiu.entity.mysql"
+                            targetProject="./src/main/java"/>
+        <sqlMapGenerator targetPackage="com.qiu.dao.mysql.mapper.xml"
+                         targetProject="./src/main/java"/>
+        <javaClientGenerator targetPackage="com.qiu.dao.mysql.mapper"
+                             targetProject="./src/main/java"
+                             type="MIXEDMAPPER"/>
+<!--        <javaModelGenerator targetPackage="com.bj58.spat.wiam.config.entity.mysql/org"-->
+<!--                            targetProject="./src/main/java"/>-->
+<!--        <sqlMapGenerator targetPackage="com.bj58.spat.wiam.config.dao.mysql.mapper.org.xml"-->
+<!--                         targetProject="./src/main/java"/>-->
+<!--        <javaClientGenerator targetPackage="com.bj58.spat.wiam.config.dao.mysql.mapper/org"-->
+<!--                             targetProject="./src/main/java"-->
+<!--                             type="MIXEDMAPPER"/>-->
+
+<!--        <table schema="db58_bspoffline01" tableName="userinfoEntity"-->
+<!--               domainObjectName="Userinfo">-->
+<!--            <generatedKey column="id" sqlStatement="SELECT LAST_INSERT_ID()" identity="true"/>-->
+<!--            <columnOverride column="leaders" jdbcType="VARCHAR"/>-->
+<!--            <columnOverride column="description" jdbcType="VARCHAR"/>-->
+<!--        </table>-->
+<!--        <table schema="db58_bspoffline01" tableName="user_extend_info"-->
+<!--               domainObjectName="UserExtendInfo">-->
+<!--            <generatedKey column="id" sqlStatement="SELECT LAST_INSERT_ID()" identity="true"/>-->
+<!--        </table>-->
+
+<!--        <table schema="db58_bspoffline01" tableName="user_company_relation"-->
+<!--               domainObjectName="UserCompanyRelation">-->
+<!--            <generatedKey column="id" sqlStatement="SELECT LAST_INSERT_ID()" identity="true"/>-->
+<!--        </table>-->
+
+<!--        <table schema="db58_bspoffline01" tableName="organization"-->
+<!--               domainObjectName="Organization">-->
+<!--            <generatedKey column="id" sqlStatement="SELECT LAST_INSERT_ID()" identity="true"/>-->
+<!--        </table>-->
+<!--                <table schema="db58_bspoffline01" tableName="user_extend_info_agent"-->
+<!--                       domainObjectName="UserExtendInfoAgent">-->
+<!--                    <generatedKey column="id" sqlStatement="SELECT LAST_INSERT_ID()" identity="true"/>-->
+<!--                </table>-->
+        <table schema="ssmbuild" tableName="book"
+                       domainObjectName="Book">
+                    <generatedKey column="id" sqlStatement="SELECT LAST_INSERT_ID()" identity="true"/>
+                </table>
+
+    </context>
+        </generatorConfiguration>
