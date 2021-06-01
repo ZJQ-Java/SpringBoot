@@ -13,7 +13,7 @@ public class BookExample {
     private Integer limit;
 
     private Integer offset;
-    private String columns;
+    private String  columns;
 
     public String getColumns() {
         return columns;
@@ -22,6 +22,7 @@ public class BookExample {
     public void setColumns(String columns) {
         this.columns = columns;
     }
+
     public BookExample() {
         oredCriteria = new ArrayList<Criteria>();
     }

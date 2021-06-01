@@ -15,7 +15,8 @@ public class MybatisBuilder {
     public static void main(String[] args) throws IOException, XMLParserException {
         List<String> warnings = new ArrayList<String>();
 
-        File configFile = new File("///Users/aqiu/Desktop/Person/Java学习/SpringBoot/springboot-web/target/classes/generatorConfig.xml");
+        File configFile = new File(
+                "///Users/aqiu/Desktop/Person/Java学习/SpringBoot/springboot-web/target/classes/generatorConfig.xml");
         System.out.println(configFile.getAbsolutePath());
         ConfigurationParser cp = new ConfigurationParser(warnings);
         Configuration config = cp.parseConfiguration(configFile);

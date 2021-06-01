@@ -100,10 +100,6 @@
             <scope>test</scope>
         </dependency>
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-data-mongodb</artifactId>
-        </dependency>
-        <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <version>1.18.16</version>
@@ -150,20 +146,9 @@
         </plugins>
 
         <resources>
-
             <resource>
                 <!--指定根目录 到源文件夹 一般如下-->
                 <directory>src/main/java</directory>
-                <includes>
-                    <include>**/*.yml</include>
-                    <include>**/*.yaml</include>
-                    <include>**/*.xml</include>
-                    <include>**/*.properties</include>
-                </includes>
-                <filtering>false</filtering>
-            </resource>
-            <resource> <!--指定根目录 到源文件夹 一般如下-->
-                <directory>src/main/resources</directory>
                 <includes>
                     <include>**/*.yml</include>
                     <include>**/*.yaml</include>

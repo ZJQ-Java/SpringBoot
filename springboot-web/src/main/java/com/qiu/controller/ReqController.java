@@ -1,11 +1,7 @@
 package com.qiu.controller;
 
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
-import javax.servlet.http.Cookie;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -67,12 +63,12 @@ public class ReqController {
     // /boss/1;age=20/2;age=10
 
     @GetMapping("/boss/{bossId}/{empId}")
-    public Map boss(@MatrixVariable(value = "age",pathVar = "bossId") Integer bossAge,
-                    @MatrixVariable(value = "age",pathVar = "empId") Integer empAge){
-        Map<String,Object> map = new HashMap<>();
+    public Map boss(@MatrixVariable(value = "age", pathVar = "bossId") Integer bossAge,
+                    @MatrixVariable(value = "age", pathVar = "empId") Integer empAge) {
+        Map<String, Object> map = new HashMap<>();
 
-        map.put("bossAge",bossAge);
-        map.put("empAge",empAge);
+        map.put("bossAge", bossAge);
+        map.put("empAge", empAge);
         return map;
 
     }

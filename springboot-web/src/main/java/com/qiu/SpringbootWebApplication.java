@@ -10,8 +10,6 @@ import org.springframework.context.ConfigurableApplicationContext;
 public class SpringbootWebApplication {
     public static void main(String[] args) {
         ConfigurableApplicationContext run = SpringApplication.run(SpringbootWebApplication.class, args);
-        System.out.println(run.getBean(Person.class).toString());
-        System.out.println(run.getBean(Pet.class).toString());
     }
 
 }

@@ -34,42 +34,42 @@
         <javaClientGenerator targetPackage="com.qiu.dao.mysql.mapper"
                              targetProject="./src/main/java"
                              type="MIXEDMAPPER"/>
-<!--        <javaModelGenerator targetPackage="com.bj58.spat.wiam.config.entity.mysql/org"-->
-<!--                            targetProject="./src/main/java"/>-->
-<!--        <sqlMapGenerator targetPackage="com.bj58.spat.wiam.config.dao.mysql.mapper.org.xml"-->
-<!--                         targetProject="./src/main/java"/>-->
-<!--        <javaClientGenerator targetPackage="com.bj58.spat.wiam.config.dao.mysql.mapper/org"-->
-<!--                             targetProject="./src/main/java"-->
-<!--                             type="MIXEDMAPPER"/>-->
+        <!--        <javaModelGenerator targetPackage="com.bj58.spat.wiam.config.entity.mysql/org"-->
+        <!--                            targetProject="./src/main/java"/>-->
+        <!--        <sqlMapGenerator targetPackage="com.bj58.spat.wiam.config.dao.mysql.mapper.org.xml"-->
+        <!--                         targetProject="./src/main/java"/>-->
+        <!--        <javaClientGenerator targetPackage="com.bj58.spat.wiam.config.dao.mysql.mapper/org"-->
+        <!--                             targetProject="./src/main/java"-->
+        <!--                             type="MIXEDMAPPER"/>-->
 
-<!--        <table schema="db58_bspoffline01" tableName="userinfoEntity"-->
-<!--               domainObjectName="Userinfo">-->
-<!--            <generatedKey column="id" sqlStatement="SELECT LAST_INSERT_ID()" identity="true"/>-->
-<!--            <columnOverride column="leaders" jdbcType="VARCHAR"/>-->
-<!--            <columnOverride column="description" jdbcType="VARCHAR"/>-->
-<!--        </table>-->
-<!--        <table schema="db58_bspoffline01" tableName="user_extend_info"-->
-<!--               domainObjectName="UserExtendInfo">-->
-<!--            <generatedKey column="id" sqlStatement="SELECT LAST_INSERT_ID()" identity="true"/>-->
-<!--        </table>-->
+        <!--        <table schema="db58_bspoffline01" tableName="userinfoEntity"-->
+        <!--               domainObjectName="Userinfo">-->
+        <!--            <generatedKey column="id" sqlStatement="SELECT LAST_INSERT_ID()" identity="true"/>-->
+        <!--            <columnOverride column="leaders" jdbcType="VARCHAR"/>-->
+        <!--            <columnOverride column="description" jdbcType="VARCHAR"/>-->
+        <!--        </table>-->
+        <!--        <table schema="db58_bspoffline01" tableName="user_extend_info"-->
+        <!--               domainObjectName="UserExtendInfo">-->
+        <!--            <generatedKey column="id" sqlStatement="SELECT LAST_INSERT_ID()" identity="true"/>-->
+        <!--        </table>-->
 
-<!--        <table schema="db58_bspoffline01" tableName="user_company_relation"-->
-<!--               domainObjectName="UserCompanyRelation">-->
-<!--            <generatedKey column="id" sqlStatement="SELECT LAST_INSERT_ID()" identity="true"/>-->
-<!--        </table>-->
+        <!--        <table schema="db58_bspoffline01" tableName="user_company_relation"-->
+        <!--               domainObjectName="UserCompanyRelation">-->
+        <!--            <generatedKey column="id" sqlStatement="SELECT LAST_INSERT_ID()" identity="true"/>-->
+        <!--        </table>-->
 
-<!--        <table schema="db58_bspoffline01" tableName="organization"-->
-<!--               domainObjectName="Organization">-->
-<!--            <generatedKey column="id" sqlStatement="SELECT LAST_INSERT_ID()" identity="true"/>-->
-<!--        </table>-->
-<!--                <table schema="db58_bspoffline01" tableName="user_extend_info_agent"-->
-<!--                       domainObjectName="UserExtendInfoAgent">-->
-<!--                    <generatedKey column="id" sqlStatement="SELECT LAST_INSERT_ID()" identity="true"/>-->
-<!--                </table>-->
+        <!--        <table schema="db58_bspoffline01" tableName="organization"-->
+        <!--               domainObjectName="Organization">-->
+        <!--            <generatedKey column="id" sqlStatement="SELECT LAST_INSERT_ID()" identity="true"/>-->
+        <!--        </table>-->
+        <!--                <table schema="db58_bspoffline01" tableName="user_extend_info_agent"-->
+        <!--                       domainObjectName="UserExtendInfoAgent">-->
+        <!--                    <generatedKey column="id" sqlStatement="SELECT LAST_INSERT_ID()" identity="true"/>-->
+        <!--                </table>-->
         <table schema="ssmbuild" tableName="book"
-                       domainObjectName="Book">
-                    <generatedKey column="id" sqlStatement="SELECT LAST_INSERT_ID()" identity="true"/>
-                </table>
+               domainObjectName="Book">
+            <generatedKey column="id" sqlStatement="SELECT LAST_INSERT_ID()" identity="true"/>
+        </table>
 
     </context>
-        </generatorConfiguration>
+</generatorConfiguration>

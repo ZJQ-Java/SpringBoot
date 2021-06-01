@@ -9,17 +9,17 @@
 #  mvc:
 #    static-path-pattern: /res/**
 
-#rest post请求转put,delete   修改_method HiddenHttpMethodFilter
 logging:
   level:
     org:
       springframework:
         context: debug
 spring:
-  mvc:
-    hiddenmethod:
-      filter:
-        enabled: true
+  #rest post请求转put,delete   修改_method HiddenHttpMethodFilter
+  #  mvc:
+  #    hiddenmethod:
+  #      filter:
+  #        enabled: true
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
     url: jdbc:mysql://localhost:3306/ssmbuild?useUnicode=true&characterEncoding=UTF-8&connectTimeout=1000&zeroDateTimeBehavior=convertToNull&useSSL=false
@@ -32,6 +32,3 @@ mybatis:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
   mapper-locations: classpath:/com/qiu/dao/mysql/mapper/xml/*.xml
   type-aliases-package: com.qiu.entity.mysql
-wiam:
-  mongo:
-    aesKey:

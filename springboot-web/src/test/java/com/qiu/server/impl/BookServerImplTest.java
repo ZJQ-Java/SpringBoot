@@ -26,7 +26,7 @@ class BookServerImplTest {
     @Test
     void updateBatch() {
         List<Integer> ids = Arrays.asList(2, 3, 4);
-        System.out.println(bookServer.updateBookDetailBatch(ids,3,"lalala"));
+        System.out.println(bookServer.updateBookDetailBatch(ids, 3, "lalala"));
     }
 
 }
