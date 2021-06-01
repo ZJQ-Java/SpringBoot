@@ -9,4 +9,6 @@ public interface BookServer {
     public List<Book> getAllBooks();
 
     void testTransaction(Book book);
+
+    public int updateBookDetailBatch(List<Integer> ids, int bookCount, String detail);
 }

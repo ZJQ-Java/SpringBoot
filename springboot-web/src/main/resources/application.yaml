@@ -10,6 +10,11 @@
 #    static-path-pattern: /res/**
 
 #rest post请求转put,delete   修改_method HiddenHttpMethodFilter
+logging:
+  level:
+    org:
+      springframework:
+        context: debug
 spring:
   mvc:
     hiddenmethod:
@@ -20,9 +25,16 @@ spring:
     url: jdbc:mysql://localhost:3306/ssmbuild?useUnicode=true&characterEncoding=UTF-8&connectTimeout=1000&zeroDateTimeBehavior=convertToNull&useSSL=false
     username: root
     password: zjq123
+#  data:
+#    mongodb:
+#      uri: mongodb://bsp_offline_wr:@test-bic01.mdb.58dns.org:57008,test-bic02.mdb.58dns.org:57008,test-bic03.mdb.58dns.org:57008/mdb58_bsp_offline.bsp_user_opt_record?replicaSet=57008&authSource=admin&journal=true
 mybatis:
   configuration:
     default-fetch-size: 100
     default-statement-timeout: 30
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
   mapper-locations: classpath:/com/qiu/dao/mysql/mapper/xml/*.xml
   type-aliases-package: com.qiu.entity.mysql
+wiam:
+  mongo:
+    aesKey:

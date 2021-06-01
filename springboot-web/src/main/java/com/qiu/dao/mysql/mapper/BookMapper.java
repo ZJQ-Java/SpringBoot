@@ -56,4 +56,6 @@ public interface BookMapper {
         "where id = #{id,jdbcType=INTEGER}"
     })
     int updateByPrimaryKey(Book record);
+
+    int updateBatch(@Param("record") Book record, @Param("ids")List<Integer> ids);
 }
