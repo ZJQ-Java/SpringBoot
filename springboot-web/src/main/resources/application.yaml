@@ -25,6 +25,12 @@ spring:
     url: jdbc:mysql://localhost:3306/ssmbuild?useUnicode=true&characterEncoding=UTF-8&connectTimeout=1000&zeroDateTimeBehavior=convertToNull&useSSL=false
     username: root
     password: zjq123
+  servlet:
+    multipart:
+      # 上传单个文件最大限制
+      max-file-size: 10MB
+      #上传总文件最大限制
+      max-request-size: 100MB
 mybatis:
   configuration:
     default-fetch-size: 100

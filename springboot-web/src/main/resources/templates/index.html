@@ -82,4 +82,21 @@ url重写：/abc;jsesssionid=xxxx 把cookie的值使用矩阵变量的方式进�
 
 <br>
 </body>
+
+<h1>单文件上传</h1>
+<body>
+<form method="post" action="/upload" enctype="multipart/form-data">
+    <input type="file" name="file"><br>
+    <input type="submit" value="提交">
+</form>
+<br/>
+<h1>多文件上传</h1>
+<form method="post" action="/uploads" enctype="multipart/form-data">
+    <input type="file" name="file"><br>
+    <input type="file" name="file"><br>
+    <input type="file" name="file"><br>
+    <input type="submit" value="提交">
+</form>
+</body>
+
 </html>
