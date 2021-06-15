@@ -1,5 +1,6 @@
 package com.qiu.controller;
 
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -10,6 +11,7 @@ import java.io.File;
 import java.io.IOException;
 
 @Controller
+@Slf4j
 public class FileController {
     @RequestMapping("/upload")
     public String uploadFile(@RequestPart("file") MultipartFile file
@@ -18,8 +20,8 @@ public class FileController {
             return "error";
         }
         final String originalFilename = file.getOriginalFilename();
-        file.transferTo(new File("/Users/aqiu/Desktop/tmpUpload/" + originalFilename));
-        model.addAttribute("msg","上传成功");
+        file.transferTo(new File(System.getProperty("user.dir") + "/springboot-web/tmp/"+originalFilename));
+        model.addAttribute("msg", "上传成功");
         return "success";
     }
 
@@ -34,10 +36,10 @@ public class FileController {
                 continue;
             }
             final String originalFilename = file.getOriginalFilename();
-            file.transferTo(new File("/Users/aqiu/Desktop/tmpUpload/" + originalFilename));
+            file.transferTo(new File(System.getProperty("user.dir") + "/springboot-web/tmp/"+originalFilename));
         }
 
-        model.addAttribute("msg","上传成功");
+        model.addAttribute("msg", "上传成功");
         return "success";
     }
 }
