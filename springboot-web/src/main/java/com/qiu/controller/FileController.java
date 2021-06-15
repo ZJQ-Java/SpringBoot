@@ -30,6 +30,9 @@ public class FileController {
             return "error";
         }
         for (MultipartFile file : files) {
+            if (file == null || file.isEmpty()) {
+                continue;
+            }
             final String originalFilename = file.getOriginalFilename();
             file.transferTo(new File("/Users/aqiu/Desktop/tmpUpload/" + originalFilename));
         }
