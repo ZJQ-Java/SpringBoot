@@ -1,5 +1,6 @@
 package com.qiu.server.impl;
 
+import com.qiu.entity.mysql.Book;
 import com.qiu.server.BookServer;
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
@@ -27,6 +28,17 @@ class BookServerImplTest {
     void updateBatch() {
         List<Integer> ids = Arrays.asList(2, 3, 4);
         System.out.println(bookServer.updateBookDetailBatch(ids, 3, "lalala"));
+    }
+
+    @Test
+    void insert() {
+        Book  book = new Book();
+        book.setDetail("11cs");
+        book.setBookCounts(11);
+        book.setBookName("test_1");
+        book.setId(11);
+        System.out.println(bookServer.addBook(book));
+        System.out.println(book);
     }
 
 }

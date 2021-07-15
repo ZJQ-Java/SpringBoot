@@ -16,7 +16,7 @@ public class MybatisBuilder {
         List<String> warnings = new ArrayList<String>();
 
         File configFile = new File(
-                "///Users/aqiu/Desktop/Person/Java学习/SpringBoot/springboot-web/target/classes/generatorConfig.xml");
+                "./src/test/java/builder/generatorConfig.xml");
         System.out.println(configFile.getAbsolutePath());
         ConfigurationParser cp = new ConfigurationParser(warnings);
         Configuration config = cp.parseConfiguration(configFile);

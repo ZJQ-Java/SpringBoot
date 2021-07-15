@@ -68,7 +68,7 @@
         <!--                </table>-->
         <table schema="ssmbuild" tableName="book"
                domainObjectName="Book">
-            <generatedKey column="id" sqlStatement="SELECT LAST_INSERT_ID()" identity="true"/>
+<!--            <generatedKey column="id" sqlStatement="SELECT LAST_INSERT_ID()" identity="true"/>-->
         </table>
 
     </context>

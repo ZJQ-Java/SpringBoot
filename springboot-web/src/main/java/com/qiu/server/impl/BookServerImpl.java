@@ -35,4 +35,10 @@ public class BookServerImpl implements BookServer {
 
         return bookMapper.updateByExampleSelective(book, where);
     }
+
+    @Override
+    public int addBook(Book book) {
+        return bookMapper.insertSelective(book);
+    }
+
 }

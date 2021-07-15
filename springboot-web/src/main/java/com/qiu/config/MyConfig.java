@@ -58,6 +58,9 @@ public class MyConfig implements WebMvcConfigurer {
                     return backgroundRefreshPools.submit(()->getValue(key));
                 }
                 public String getValue(Integer key){
+                    if(key == 11){
+                        return null;
+                    }
                     log.info("getValue -----> key:" +key);
                    return key + "cache";
                 }
@@ -84,17 +87,17 @@ public class MyConfig implements WebMvcConfigurer {
 //                        "/js/**", "/aa/**"); //放行的请求
 //    }
 
-    @Bean
-    @ConditionalOnMissingBean //如果没有其他person bean 则注入
-    public Person person1() {
-        return new Person(2, "hhah");
-    }
-
-    @Bean
-    @ConditionalOnBean(Person.class)  //有Person bean注入，也注入pet
-    public Pet pet() {
-        return new Pet(3, "cat");
-    }
+//    @Bean
+//    @ConditionalOnMissingBean //如果没有其他person bean 则注入
+//    public Person person1() {
+//        return new Person(2, "hhah");
+//    }
+//
+//    @Bean
+//    @ConditionalOnBean(Person.class)  //有Person bean注入，也注入pet
+//    public Pet pet() {
+//        return new Pet(3, "cat");
+//    }
 
 
 }

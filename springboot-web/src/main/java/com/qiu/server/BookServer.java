@@ -11,4 +11,6 @@ public interface BookServer {
     void testTransaction(Book book);
 
     public int updateBookDetailBatch(List<Integer> ids, int bookCount, String detail);
+
+    public int addBook(Book book);
 }
