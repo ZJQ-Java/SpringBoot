@@ -6,26 +6,22 @@ import com.google.common.cache.CacheLoader;
 import com.google.common.cache.LoadingCache;
 import com.google.common.cache.RemovalListener;
 import com.google.common.util.concurrent.ListenableFuture;
-import com.google.common.util.concurrent.ListenableFutureTask;
 import com.google.common.util.concurrent.ListeningExecutorService;
 import com.google.common.util.concurrent.MoreExecutors;
-import com.qiu.entity.Person;
-import com.qiu.entity.Pet;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
-import org.springframework.context.annotation.Bean;
+import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.concurrent.Callable;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 
 @Configuration
 @Slf4j
+@ConfigurationProperties(prefix = "my.web.config")
+
 public class MyConfig implements WebMvcConfigurer {
     // url /后是否截断，矩阵变量
 //    @Override
@@ -34,6 +30,8 @@ public class MyConfig implements WebMvcConfigurer {
 //        urlPathHelper.setRemoveSemicolonContent(false);
 //        configurer.setUrlPathHelper(urlPathHelper);
 //    }
+
+
     private static ListeningExecutorService      backgroundRefreshPools =
             MoreExecutors.listeningDecorator(Executors.newSingleThreadExecutor());
     public static  LoadingCache<Integer, String> KEY_NAME_CACHE         = CacheBuilder.newBuilder()

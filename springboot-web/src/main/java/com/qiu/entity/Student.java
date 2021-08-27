@@ -8,6 +8,7 @@ import lombok.ToString;
 
 import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
+import java.util.function.Function;
 import java.util.stream.Collectors;
 
 @Data
@@ -29,7 +30,7 @@ public class Student {
     }
 
     public static void main(String[] args) {
-        Map<Integer, List<Student>> collect = list.stream().collect(Collectors.groupingBy(Student::getAge));
+        /*Map<Integer, List<Student>> collect = list.stream().collect(Collectors.groupingBy(Student::getAge));
         System.out.println(JSON.toJSONString(collect));
         Map<Integer, Long> collect1 = list.stream()
                 .collect(Collectors.groupingBy(Student::getAge, Collectors.counting()));
@@ -39,6 +40,12 @@ public class Student {
         System.out.println(JSON.toJSONString(collect2));
         Map<Integer, List<Student>> collect3 = list.stream()
                 .collect(Collectors.groupingBy(Student::getAge, TreeMap::new, Collectors.toList()));
-        System.out.println(collect3);
+        System.out.println(collect3);*/
+        Map<Integer, Student> collect = list.stream().collect(Collectors.toMap(Student::getId, Function.identity(),(o1,o2)->o1));
+        System.out.println(JSON.toJSONString(collect));
+        collect.get(1).setAge(100);
+        System.out.println(JSON.toJSONString(collect));
+
+
     }
 }

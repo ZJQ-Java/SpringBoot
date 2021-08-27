@@ -31,6 +31,16 @@ spring:
       max-file-size: 10MB
       #上传总文件最大限制
       max-request-size: 100MB
+  freemarker:
+    settings:
+      classic_compatible: true #处理空值
+      datetime_format: yyy-MM-dd HH:mm
+      number_format: 0.##
+    suffix: .ftl
+    template-loader-path:
+      - classpath:/templates
+  mvc:
+    static-path-pattern: /static/**
 mybatis:
   configuration:
     default-fetch-size: 100
@@ -38,3 +48,11 @@ mybatis:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
   mapper-locations: classpath:/com/qiu/dao/mysql/mapper/xml/*.xml
   type-aliases-package: com.qiu.entity.mysql
+
+my:
+  web:
+    tools:
+      HTTP_INNER_ACCESS_KEY: c105a4692ae4476bb9d7e72ec061407e
+      ENABLE_TOOL_PAGE_HTTP_DIGEST_AUTH: false
+
+
